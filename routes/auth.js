@@ -27,7 +27,6 @@ auth.post("/login",async (req,res)=>{
         return res.status(200).json({message: "Login successful", error:"",token});
     }
     catch (err){
-        console.log("Login unsuccessful", err);
         return res.status(400).json({message:"",error:`Login unsuccessful. ${err}`});
     }
 });
